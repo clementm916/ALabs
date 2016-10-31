@@ -1,4 +1,5 @@
 def data_type(a):
+	"""Takes one input and returns a value in respect to data type of the input  """
 	a_type =type(a)
 	if a_type == str:
 		return len(a)
@@ -21,7 +22,3 @@ def data_type(a):
 			return None
 	else:
 		return 'no value'
-
-
-
-print data_type(None)
