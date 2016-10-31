@@ -26,15 +26,19 @@ class Car(object):
 	def is_saloon(self):
 		if self.car_type != 'trailer':
 			return True
-	def drive(self,s):
-		if self.car_type == 'trailer':
-			self.speed= (s * 11)
-			return self
-		elif self.name =='Mercedes':
-			self.speed =(500 * (s-1))
-			return self
+	def _drive(self,s):
 
-
+		if self.car_type == 'trailer' and s>0:
+			self.speed= 77
+			return self
+		elif self.name =='Mercedes' and s>0:
+			self.speed = 1000
+			return self
+		else:
+			return self
+	def _get_drive(self):
+		return self.speed
+	drive = property(_drive,_get_drive)
 
 
 
