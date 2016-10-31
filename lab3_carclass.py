@@ -26,7 +26,7 @@ class Car(object):
 	def is_saloon(self):
 		if self.car_type != 'trailer':
 			return True
-	def _drive(self,s):
+	def drive(self,s):
 
 		if self.car_type == 'trailer' and s>0:
 			self.speed= 77
@@ -36,9 +36,8 @@ class Car(object):
 			return self
 		else:
 			return self
-	def _get_drive(self):
-		return self.speed
-	drive = property(_drive,_get_drive)
+
+
 
 
 
