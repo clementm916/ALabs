@@ -1,6 +1,5 @@
 class Car(object):
-    
-
+	"""Car class, blue print for car objects """
 	def __init__(self,name = None,model=None,car_type = None):
 
 		self.car_type =car_type
@@ -24,21 +23,23 @@ class Car(object):
 
 
 	def is_saloon(self):
+		"""Returns false if car True if car is not a trailer"""
 		if self.car_type != 'trailer':
 			return True
-	def _drive(self,s):
-
-		if self.car_type == 'trailer' and s>0:
+		else:
+		 return False
+	def drive(self,s):
+	    """Gets the at driving speed"""
+	    if self.car_type == 'trailer' and s>0:
 			self.speed= 77
 			return self
-		elif self.name =='Mercedes' and s>0:
+	    elif self.name =='Mercedes' and s>0:
 			self.speed = 1000
 			return self
-		else:
-			return self
-	def _get_drive(self):
-		return self.speed
-	drive = property(_drive,_get_drive)
+	    else:
+		    return self
+
+
 
 
 

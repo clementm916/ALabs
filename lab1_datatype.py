@@ -13,7 +13,6 @@ def data_type(a):
 
 		else:
 			return 'more than 100'
-
 	elif a_type ==list:
 		try:
 			if a[2]:
@@ -22,3 +21,4 @@ def data_type(a):
 			return None
 	else:
 		return 'no value'
+		
